@@ -15,7 +15,7 @@ func HandleHelloWorld(w http.ResponseWriter, r *http.Request) {
 //CreateServer ... Creates the server
 func CreateServer() {
 	http.HandleFunc("/", HandleHelloWorld)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServeTLS(":8080", "cert.pem", "key.pem", nil))
 }
 
 func main() {

@@ -6,5 +6,5 @@ openssl req -x509 \
             -nodes \
             -keyout key.pem \
             -out cert.pem \
-            -subj "/CN=golang.com" \
+            -subj "/CN=localhost" \
             -days 3650
