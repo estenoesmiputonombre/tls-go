@@ -1,25 +1,26 @@
 package main
 
 import (
-	"database/sql"
+	"fmt"
+	"net/http"
 	"os"
+
+	"github.com/gorilla/mux"
 )
 
 var (
-	//DBHost ... Address of the database to connect to it
-	DBHost = os.Getenv("MYSQL_ROOT_ADDR")
-	//DBPort ... Port to connect to the database
-	DBPort = os.Getenv("MYSQL_ROOT_PORT")
-	//DBUser ... User to connect to the database
-	DBUser = os.Getenv("MYSQL_ROOT_USER")
-	//DBPassword ... Password to connect to the database
-	DBPassword = os.Getenv("MYSQL_ROOT_PASSWORD")
-	//DBDbase ... Database name to connect
-	DBDbase = os.Getenv("MYSQL_ROOT_DATABASE_NAME")
-	//Driver ... Used to manage connections and data
-	Driver *sql.DB
+	//PORT ... Port to connect to golang service
+	PORT = os.Getenv("PORT")
 )
 
 func main() {
+	gorilla := mux.NewRouter()
+	gorilla.HandleFunc("/employers/{amount:[0-9]{1,2}}", ServePage)
+	http.Handle("/", gorilla)
 
+	http.ListenAndServe(fmt.Sprintf(":%s", PORT), nil)
+}
+
+//ServePage ... Serves the page to addr:port/whatever
+func ServePage(w http.ResponseWriter, r *http.Request) {
 }

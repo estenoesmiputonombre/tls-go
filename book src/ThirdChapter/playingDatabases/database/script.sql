@@ -74,6 +74,84 @@ INSERT INTO
     employers(name, surname, id_language)
 VALUES
     ('Pablo', 'Rodriguez', 1);
+INSERT INTO 
+    employers(name, surname, id_language)
+VALUES
+    ('Pepe', 'Pepita', 1);
+
+INSERT INTO 
+    employers(name, surname, id_language)
+VALUES
+    ('Jose', 'Manuel', 2);
+
+INSERT INTO 
+    employers(name, surname, id_language)
+VALUES
+    ('Manuel', 'Cofrade', 3);
+
+INSERT INTO 
+    employers(name, surname, id_language)
+VALUES
+    ('Noemi', 'Bouzo', 2);
+
+INSERT INTO 
+    employers(name, surname, id_language)
+VALUES
+    ('Ivan', 'Martinez', 1);
+
+INSERT INTO 
+    employers(name, surname, id_language)
+VALUES
+    ('Oscar', 'Dorrego', 3);
+
+INSERT INTO 
+    employers(name, surname, id_language)
+VALUES
+    ('Pilar', 'Fernandez', 2);
+
+INSERT INTO 
+    employers(name, surname, id_language)
+VALUES
+    ('Pablo', 'Rodriguez', 1);
+INSERT INTO 
+    employers(name, surname, id_language)
+VALUES
+    ('Pepe', 'Pepita', 1);
+
+INSERT INTO 
+    employers(name, surname, id_language)
+VALUES
+    ('Jose', 'Manuel', 2);
+
+INSERT INTO 
+    employers(name, surname, id_language)
+VALUES
+    ('Manuel', 'Cofrade', 3);
+
+INSERT INTO 
+    employers(name, surname, id_language)
+VALUES
+    ('Noemi', 'Bouzo', 2);
+
+INSERT INTO 
+    employers(name, surname, id_language)
+VALUES
+    ('Ivan', 'Martinez', 1);
+
+INSERT INTO 
+    employers(name, surname, id_language)
+VALUES
+    ('Oscar', 'Dorrego', 3);
+
+INSERT INTO 
+    employers(name, surname, id_language)
+VALUES
+    ('Pilar', 'Fernandez', 2);
+
+INSERT INTO 
+    employers(name, surname, id_language)
+VALUES
+    ('Pablo', 'Rodriguez', 1);
 
 SELECT * FROM employers;
 SELECT name FROM languages WHERE id IN (SELECT id_language FROM employers WHERE name LIKE 'Ivan');

@@ -36,7 +36,7 @@ if [ $(docker CONTAINER_DATABASE ls --all --format "{{.Names}}" | grep -w -c $CO
         docker run --detach \
                    --env-file "${PWD}/secret" \
                    --name ${CONTAINER_GO} \
-                   --publish 60-81:8080 \
+                   --publish 8080:8080 \
                    --network ${NETWORK} ${IMAGE_GO}:${TAG}
     fi
 fi
