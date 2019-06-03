@@ -8,8 +8,8 @@ import (
 var (
 	//DBHost ... Address of the database to connect to it
 	DBHost = os.Getenv("MYSQL_ROOT_ADDR")
-	//PORT ... Port to connect to the database
-	PORT = os.Getenv("MYSQL_ROOT_PORT")
+	//DBPort ... Port to connect to the database
+	DBPort = os.Getenv("MYSQL_ROOT_PORT")
 	//DBUser ... User to connect to the database
 	DBUser = os.Getenv("MYSQL_ROOT_USER")
 	//DBPassword ... Password to connect to the database
